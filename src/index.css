@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #FF4B2B;
+  --color-secondary: #00A8E8;
+  --color-accent: #FFD100;
+  --color-dark: #1A1A1A;
+  --color-light: #F5F5F5;
+
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-body text-dark bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
