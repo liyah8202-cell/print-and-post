@@ -6,12 +6,19 @@ export default function Footer() {
       <div className="container px-4 py-12 md:py-16">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold">Shop</h4>
+            <h4 className="text-sm font-semibold">Services</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link to="/create" className="hover:text-primary">Custom Prints</Link></li>
+              <li><Link to="/bulk" className="hover:text-primary">Bulk Orders</Link></li>
+              <li><Link to="/artists" className="hover:text-primary">For Artists</Link></li>
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <h4 className="text-sm font-semibold">Shop Art</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link to="/category/stickers" className="hover:text-primary">Stickers</Link></li>
               <li><Link to="/category/art-prints" className="hover:text-primary">Art Prints</Link></li>
               <li><Link to="/category/posters" className="hover:text-primary">Posters</Link></li>
-              <li><Link to="/new-arrivals" className="hover:text-primary">New Arrivals</Link></li>
             </ul>
           </div>
           <div className="space-y-4">
@@ -24,13 +31,11 @@ export default function Footer() {
             </ul>
           </div>
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold">Company</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/about" className="hover:text-primary">About Us</Link></li>
-              <li><Link to="/sustainability" className="hover:text-primary">Sustainability</Link></li>
-              <li><Link to="/terms" className="hover:text-primary">Terms of Service</Link></li>
-              <li><Link to="/privacy" className="hover:text-primary">Privacy Policy</Link></li>
-            </ul>
+            <h4 className="text-sm font-semibold">Print & Post</h4>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Premium custom printing for photographers, artists, and creators. 
+              Upload your own images and we'll turn them into professional reality.
+            </p>
           </div>
           <div className="space-y-4">
             <h4 className="text-sm font-semibold">Newsletter</h4>

@@ -3,6 +3,7 @@ import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import CreatePage from './pages/CreatePage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import { CartProvider } from './context/CartContext';
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
+            <Route path="create" element={<CreatePage />} />
             <Route path="category/:id" element={<CategoryPage />} />
             <Route path="product/:id" element={<ProductDetailPage />} />
             <Route path="cart" element={<CartPage />} />

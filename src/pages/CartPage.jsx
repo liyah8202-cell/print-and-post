@@ -48,8 +48,15 @@ export default function CartPage() {
                   <img src={item.image} alt={item.name} className="h-full w-full object-cover" />
                 </div>
                 <div className="flex flex-col">
-                  <h3 className="text-base font-bold text-dark">{item.name}</h3>
-                  <p className="text-sm text-muted-foreground capitalize">{item.category.replace('-', ' ')}</p>
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-base font-bold text-dark">{item.name}</h3>
+                    {item.isCustom && (
+                      <span className="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Custom</span>
+                    )}
+                  </div>
+                  <p className="text-sm text-muted-foreground capitalize">
+                    {item.isCustom ? item.description : item.category.replace('-', ' ')}
+                  </p>
                   <p className="mt-1 text-sm font-semibold text-primary">${item.price.toFixed(2)}</p>
                   <button 
                     onClick={() => removeFromCart(item.id)}

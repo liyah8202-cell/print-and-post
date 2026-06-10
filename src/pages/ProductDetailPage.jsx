@@ -40,9 +40,7 @@ export default function ProductDetailPage() {
   };
 
   const handleAddToCart = () => {
-    for (let i = 0; i < quantity; i++) {
-      addToCart(product);
-    }
+    addToCart(product, quantity);
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
   };
